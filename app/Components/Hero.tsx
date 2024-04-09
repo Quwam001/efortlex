@@ -11,7 +11,9 @@ const Hero: React.FC = () => {
           <h1 className="text-4xl font-bold md:text-2xl lg:text-4xl">
             Empowering Innovation
           </h1>
-          <h1 className="text-4xl font-bold md:text-2xl lg:text-4xl">Across Industries</h1>
+          <h1 className="text-4xl font-bold md:text-2xl lg:text-4xl">
+            Across Industries
+          </h1>
           <p className="mt-3">
             Leading Solutions in Engineering, Gis/Mapping IT and More{" "}
           </p>
@@ -48,10 +50,7 @@ const Hero: React.FC = () => {
       jelly */}
 
       <div className="mt-4 mb-4 text-white px-8 py-5 grid cols-1 md:grid-cols-2 md:justify-center  lg:grid-cols-3 px-20 gap-10 ">
-        <div
-        
-
-          className="bg-black rounded p-5 line-height: 0.5 bg-[url('/images/Rectangle 1.png')]">
+        <div className="bg-black rounded p-5 line-height: 0.5 bg-[url('/images/Rectangle 1.png')]">
           <h5 className="text-yellow-500 mb-4 ">Partners </h5>
           <p>
             Baftha Solution Limited strategic partnership enhance our ability to
@@ -67,9 +66,11 @@ const Hero: React.FC = () => {
           </p>
         </div>
 
-        <div style={{ backgroundImage: "url('./')" }} className="bg-black rounded p-5 line-height: 0.5">
+        <div
+          style={{ backgroundImage: "url('./')" }}
+          className="bg-black rounded p-5 line-height: 0.5">
           <h5 className="text-yellow-500 mb-4">Partners </h5>
-          <p> 
+          <p>
             Baftha Solution Limited strategic partnership enhance our ability to
             provide exceptional solutions
           </p>
