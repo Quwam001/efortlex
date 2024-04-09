@@ -3,14 +3,15 @@ import React from "react";
 import handsomeMan from "../../public/images/handsome-young-businessman-suit_273609-6513 1.png";
 const About: React.FC = () => {
   return (
-    <div >
-      <div className="py-20 px-8" >
+    <div>
+      <div className="py-20 px-8">
         <center>
           <h1 className="text-4xl text-primary font-extrabold">About Us </h1>
         </center>
-        <div className="grid items-center justify-center py-5 gap-6 md:grid-cols-1 lg:grid-cols-[1fr,1.5fr] " id="about">
+        <div
+          className="grid items-center justify-center py-5 gap-6 md:grid-cols-1 lg:grid-cols-[1fr,1.5fr] "
+          id="about">
           <center>
-            {" "}
             <div>
               <Image
                 src={handsomeMan} // Path to your image
@@ -22,7 +23,7 @@ const About: React.FC = () => {
             </div>
           </center>
 
-          <div className="gap-6 grid md:grid-cols-2" >
+          <div className="gap-6 grid md:grid-cols-2">
             <div className="mb-0 bg-gray-50 py-4 px-3 sm:mb-6 rounded ">
               <h1 className="text-2xl text-primary font-bold mb-4">
                 Our Company{" "}
