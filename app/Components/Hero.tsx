@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import heroImg from "../../public/images/Ellipse 6.png";
+import Link from "next/link";
 
 const Hero: React.FC = () => {
   return (
@@ -18,9 +19,12 @@ const Hero: React.FC = () => {
               Leading Solutions in Engineering, Gis/Mapping IT and More{" "}
             </p>
 
-            <button className="font-light px-4 py-2 rounded font-size-2 text-sm text-white bg-black mt-6">
-              Explore Our Services{" "}
-            </button>
+            <Link href="#service">
+              {" "}
+              <button className="font-light px-4 py-2 rounded font-size-2 text-sm text-white bg-black mt-6">
+                Explore Our Services{" "}
+              </button>
+            </Link>
           </div>
 
           <div>
