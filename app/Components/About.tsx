@@ -98,7 +98,7 @@ const About: React.FC = () => {
           </p>
           <p className="text-white px-38 text-sm ">
             
-            our testimonials and see why we're the partner of choice for
+            our testimonials and see why we&apos;re the partner of choice for
             businesses worldwide.
           </p>
         </div>
