@@ -12,7 +12,7 @@ const About: React.FC = () => {
           className="grid items-center justify-center py-5 gap-6 md:grid-cols-1 lg:grid-cols-[1fr,1.5fr] "
           id="about">
           <center>
-            {" "}
+          
             <div>
               <Image
                 src={handsomeMan} // Path to your image
@@ -92,12 +92,12 @@ const About: React.FC = () => {
             innovation,
           </p>
           <p className="text-white px-38 text-sm ">
-            {" "}
-            we've earned the trust of leading organizations across industries.
+            
+            we&apos;ve earned the trust of leading organizations across industries.
             Explore
           </p>
           <p className="text-white px-38 text-sm ">
-            {" "}
+            
             our testimonials and see why we're the partner of choice for
             businesses worldwide.
           </p>

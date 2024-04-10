@@ -14,9 +14,9 @@ const GetStarted: React.FC = () => {
               Ready to Transform Your Business?
             </i>
             <div className="mb-4">
-              {" "}
+             
               <small className="text-xm ">
-                Whether you're seeking expert engineering solutions, advanced
+                Whether you&apos;re  seeking expert engineering solutions, advanced
                 GIS/Mapping services, or cutting-edge IT solutions, Baftha is
                 here to help. Contact us today to discuss your project and
                 discover how we can drive your success.
