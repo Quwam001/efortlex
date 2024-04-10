@@ -12,6 +12,7 @@ const About: React.FC = () => {
           className="grid items-center justify-center py-5 gap-6 md:grid-cols-1 lg:grid-cols-[1fr,1.5fr] "
           id="about">
           <center>
+            {" "}
             <div>
               <Image
                 src={handsomeMan} // Path to your image

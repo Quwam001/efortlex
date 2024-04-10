@@ -19,11 +19,13 @@ const config: Config = {
       colors: {
         orange: "#f17e15",
         "services":"#5C5E60",
+        "blackBackground":"#212121",
+        "message":"#02122E",
+        "we":"#28303D"
+
         
       },
-      transitionDuration: {
-        '300': '0.3s', // for transition on navbar on mobile
-      },
+     
     },
   },
   plugins: [],

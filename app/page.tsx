@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <About />
       <Service />
-      {/* <GetStarted /> */}
+      <GetStarted />
       <Footer />
 
     </div>
