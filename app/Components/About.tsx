@@ -4,6 +4,7 @@ import handsomeMan from "../../public/images/handsome-young-businessman-suit_273
 const About: React.FC = () => {
   return (
     <div>
+     
       <div className="py-20 px-8">
         <center>
           <h1 className="text-4xl text-primary font-extrabold">About Us </h1>
