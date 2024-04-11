@@ -11,8 +11,11 @@ const GetToKnowUs: React.FC = () => {
       <div>
         <div className=" px-3 py-10 grid grid-cols-1 text-center gap-10 md:px-20 py-5 md:grid-cols-2 md:gap-0 md:items-center md:text-left lg:px-20">
           <center>
-          <div className="text-3xl text-blueG font-bold md:text-2xl lg:text-4xl mb-3 md:hidden">
+          <div className="">
+         
+          <h1 className="text-3xl text-blue-400 font-bold mb-3 md:hidden">
               Get To Know Us
+            </h1>
             </div>
             <Image
               src={knowLady} // Path to your image
@@ -23,10 +26,10 @@ const GetToKnowUs: React.FC = () => {
             />
           </center>
           <div>
-            <h1 className="sm:hidden md:text-2xl text-blue-400 font-bold">
+            <h1 className="hidden md:block text-3xl text-blue-400 font-bold ">
               Get To Know Us
             </h1>
-            <p className="custom-gray text-sm mt-4 text-left">
+            <p className="custom-gray text-sm mt-1 text-left">
               EduAid Solutions is a team of passionate educators, researchers,
               and writers committed to helping students succeed in their
               academic endeavors. With years of experience in academia and a

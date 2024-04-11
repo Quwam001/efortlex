@@ -17,7 +17,7 @@ const WhyChooseUs: React.FC = () => {
         <h1 className="text-blueG font-bold text-2xl">Why Choose Us </h1>
       </div>
 
-      <div className="md:flex gap-4 items-top">
+      <div className=" gap-4 items-end lg:flex ">
         <div className="grid gap-8 mt-10 md:grid-cols-2">
           <div className="flex items-center gap-2">
             <Image
@@ -81,7 +81,7 @@ const WhyChooseUs: React.FC = () => {
               <p>
                 <small className="text-px">
                   We prioritize customer satisfaction and strive to exceed our
-                  clients' expectations by providing exceptional service, prompt
+                  client&apos;s expectations by providing exceptional service, prompt
                   communication, and ongoing support.
                 </small>
               </p>
@@ -89,7 +89,7 @@ const WhyChooseUs: React.FC = () => {
           </div>
         </div>
 
-        <Image src={book} alt="book-img" className="w-full" />
+        <center className="lg:w-full"><Image src={book} alt="book-img" className="lg:w-full" /></center>
       </div>
     </div>
   );

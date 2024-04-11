@@ -7,6 +7,7 @@ import GetStarted from "./Components/GetStarted";
 import Footer from "./Components/Footer";
 import GetToKnowUs from "./Components/GetToKnowUs";
 import WhyChooseUs from "./Components/WhyChooseUs";
+import Reviews from "./Components/Reviews";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
 <GetToKnowUs />
 <WhyChooseUs/>
 <Service />
-
+<Reviews />
       {/* <About /> */}
       <GetStarted />
       <Footer />

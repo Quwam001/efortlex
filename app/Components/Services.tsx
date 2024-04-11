@@ -54,7 +54,7 @@ const Service: React.FC = () => {
             </center>
             <h5 className="mb-1 text-blueG">Editing and Proofreadinge</h5>
             <p className="text-sm">
-              Our experienced editors ensure that students' work is polished,
+              Our experienced editors ensure that student&apos;s work is polished,
               error-free, and meets the highest standards of clarity, coherence,
               and academic integrity
             </p>
