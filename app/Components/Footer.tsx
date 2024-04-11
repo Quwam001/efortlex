@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           </div>
           <hr />
           <small className="text-white text-sm">
-            &copy; 2024 Baftha Solutions Limited. All right reserved{" "}
+            &copy; 2024 Eduaid Solutions Limited. All right reserved{" "}
           </small>
         </div>
       </div>

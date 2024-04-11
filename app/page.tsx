@@ -5,6 +5,8 @@ import About from "./Components/About";
 import Service from "./Components/Services";
 import GetStarted from "./Components/GetStarted";
 import Footer from "./Components/Footer";
+import GetToKnowUs from "./Components/GetToKnowUs";
+import WhyChooseUs from "./Components/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -12,10 +14,16 @@ export default function Home() {
 
 
 
+
+<div className="bg-gradient-to-b from-blueG pb-3">
 <NavBar />
       <Hero />
-      <About />
-      <Service />
+</div>
+<GetToKnowUs />
+<WhyChooseUs/>
+<Service />
+
+      {/* <About /> */}
       <GetStarted />
       <Footer />
 

@@ -31,15 +31,15 @@ const NavBar: React.FC = () => {
         className={ 
           
           isScrolled
-            ? "hidden md:flex md:items-center md:justify-between md:px-20 py-5 bg-white md:fixed left-0 right-0 duration-[300ms]"
-            : " hidden md:flex md:items-center md:justify-between md:px-20 py-5 bg-white duration-[300ms]"
+            ? "hidden md:flex md:items-center md:justify-between md:px-20 py-3 md:fixed left-0 right-0 bg-black duration-[300ms]"
+            : " hidden md:flex md:items-center md:justify-between md:px-20 py-2  duration-[300ms]"
         }>
         <Link href="/">
           {" "}
           <Image src={logo} alt="logo" />{" "}
         </Link>
 
-        <ul className="flex gap-6 md:items-center md:justify-between">
+        <ul className="flex gap-6 md:items-center md:justify-between text-white" >
           <li>
             <Link className="font-bold" href="#about">
               About
@@ -53,7 +53,7 @@ const NavBar: React.FC = () => {
 
           <li>
             <Link href="#getStarted">
-              <button className="font-light px-8 py-2 rounded font-size-2 font-bold text-white bg-black ">
+              <button className="font-light px-8 py-2 rounded font-size-2 font-bold  bg-white text-blueG ">
                 Get Started
               </button>
             </Link>
@@ -111,7 +111,7 @@ const NavBar: React.FC = () => {
           </li>
           <li>
             {" "}
-            <button className="font-light px-8 py-2 rounded font-size-2 font-bold text-black font-bold bg-white shadow-lg">
+            <button className="font-light px-4 py-2 rounded font-size-2 text-sm text-blueG bg-white mt-4">
               Get Started
             </button>{" "}
           </li>

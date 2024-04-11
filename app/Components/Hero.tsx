@@ -7,35 +7,35 @@ const Hero: React.FC = () => {
   return (
     <div>
       <div>
-        <div className="px-2 py-10 grid grid-cols-1 text-center gap-10 md:px-20 md:grid-cols-2 md:gap-0 md:items-center md:text-left lg:px-25">
-          <div>
+        <div className="bg-gradient-to-b from-blueG  to-white px-2 py-10 grid grid-cols-1 text-center gap-10 md:px-20 py-5 md:grid-cols-2 md:gap-0 md:items-center md:text-left lg:px-25">
+          <div className="order-2 md:order-1">
             <h1 className="text-4xl font-bold md:text-2xl lg:text-4xl">
-              Empowering Innovation
+             Your Guide To <span className="text-white">Academic</span>
             </h1>
             <h1 className="text-4xl font-bold md:text-2xl lg:text-4xl">
-              Across Industries
+              Excellence
             </h1>
-            <p className="mt-3">
-              Leading Solutions in Engineering, Gis/Mapping IT and More{" "}
+            <p className="mt-3 font-bold">
+             Achieve More To Path The Academic Excellence 
             </p>
 
             <Link href="#service">
               {" "}
-              <button className="font-light px-4 py-2 rounded font-size-2 text-sm text-white bg-black mt-6">
-                Explore Our Services{" "}
+              <button className="font-light px-4 py-2 rounded font-size-2 text-sm text-blueG bg-white mt-6">
+               learn More 
               </button>
             </Link>
           </div>
 
-          <div>
+          <center className="order-1 md:order-2">
             <Image
               src={heroImg} // Path to your image
-              className="sm:px-3"
+              className="sm:px-3 "
               alt="hero-img" // Alt text for the image
               // width={350}
               // height={300}
             />
-          </div>
+          </center>
         </div>
 
         {/* usual 
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
       rain
       jelly */}
 
-        <div className="mt-4 mb-4 text-white px-8 py-5 grid cols-1 md:grid-cols-2 md:justify-center  lg:grid-cols-3 px-20 gap-10 ">
+        {/* <div className="mt-4 mb-4 text-white px-8 py-5 grid cols-1 md:grid-cols-2 md:justify-center  lg:grid-cols-3 px-20 gap-10 ">
           <div className="bg-black rounded p-5 line-height: 0.5 bg-[url('/images/Rectangle 1.png')]">
             <h5 className="text-yellow-500 mb-4 ">Partners </h5>
             <p>
@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
               to provide exceptional solutions
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

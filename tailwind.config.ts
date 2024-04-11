@@ -18,14 +18,14 @@ const config: Config = {
       },
       colors: {
         orange: "#f17e15",
-        "services":"#5C5E60",
-        "blackBackground":"#212121",
-        "message":"#02122E",
-        "we":"#28303D"
-
-        
+        services: "#5C5E60",
+        blackBackground: "#212121",
+        message: "#02122E",
+        we: "#28303D",
+        blueG: "#1993E8",
+        white: "#FFFFFF",
+        px: "1px",
       },
-     
     },
   },
   plugins: [],
