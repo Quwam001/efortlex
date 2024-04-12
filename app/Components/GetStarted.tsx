@@ -117,7 +117,7 @@ const GetStarted: React.FC = () => {
                 </select>
               </div>
 
-              {/* <div>
+              <div>
                 <select
                   id="institution"
                   name="institution"
@@ -135,7 +135,7 @@ const GetStarted: React.FC = () => {
                   <option value="yale">Yale University</option>
                   <option value="columbia">Columbia University</option>
                 </select>
-              </div> */}
+              </div>
 
               <div>
                 <textarea
