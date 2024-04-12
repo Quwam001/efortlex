@@ -12,7 +12,7 @@ import fluent from "../../public/images/fluent_person-support-24-filled.png";
 
 const WhyChooseUs: React.FC = () => {
   return (
-    <div className="px-4 py-10 md:px-20 py-14">
+    <div className="px-6 py-10 md:px-20 py-14">
       <div className="text-center md:text-left">
         <h1 className="text-blueG font-bold text-2xl">Why Choose Us </h1>
       </div>

@@ -9,7 +9,7 @@ const GetToKnowUs: React.FC = () => {
   return (
     <div>
       <div>
-        <div className=" px-3 py-10 grid grid-cols-1 text-center gap-10 md:px-20 py-5 md:grid-cols-2 md:gap-0 md:items-center md:text-left lg:px-20">
+        <div className="px-6 py-10 grid grid-cols-1 text-center gap-10 md:px-20 py-5 md:grid-cols-2 md:gap-0 md:items-center md:text-left lg:px-20">
           <center>
           <div className="">
          
