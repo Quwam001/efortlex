@@ -114,7 +114,7 @@ const Reviews: React.FC = () => {
           </center>
         </div>
 
-        <div className="px-4 md:hidden"><Slider {...settings} className="">
+        {/* <div className="px-4 md:hidden"><Slider {...settings} className="">
         <div className="bg-blue-100 p-4 rounded ">
             <div className="flex items-center">
               <Image src={star1} alt="star" className="h-4 w-5" />
@@ -198,7 +198,7 @@ const Reviews: React.FC = () => {
               </div>
             </div>
          
-        </Slider></div>
+        </Slider></div> */}
       </div>
     </div>
   );
