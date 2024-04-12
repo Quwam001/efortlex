@@ -79,23 +79,17 @@ const GetStarted: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Full name "
-                  className="border px-3 py-2 rounded text-xm w-full"
+                  className="border px-3 py-2 rounded text-xm "
                 />
               </div>
               <div>
                 <input
                   type="email"
                   placeholder="Email address "
-                  className="mb-4 border px-3 py-2 rounded text-xm w-full"
+                  className="mb-4 border px-3 py-2 rounded text-xm"
                 />
               </div>
-              {/* <div>
-                <input
-                  type="tel"
-                  placeholder="Phone number "
-                  className="mb-4 border px-3 py-2 rounded text-xm w-full"
-                />
-              </div> */}
+              
 
               <div>
                 <PhoneInput
@@ -103,7 +97,7 @@ const GetStarted: React.FC = () => {
                   placeholder="Enter phone number"
                   value={value}
                   defaultCountry="US"
-                  className="w-full mb-4 border px-3 py-2 bg-white"
+                  className=" mb-4 border px-3 py-2 bg-white"
                 />
               </div>
 
@@ -111,23 +105,23 @@ const GetStarted: React.FC = () => {
                 <select
                   id="educationLevel"
                   name="educationLevel "
-                  className="mb-4 border px-3 py-2 rounded text-xm w-full">
-                  <option value="">Level of education </option>
-                  <option value="noHighSchool">No High School Diploma</option>
-                  <option value="highSchool">High School Diploma</option>
-                  <option value="someCollege">Some College, No Degree</option>
-                  <option value="associates">Associate Degree</option>
-                  <option value="bachelors">Bachelor&apos;s Degree</option>
-                  <option value="masters">Master&apos;s Degree</option>
-                  <option value="doctorate">Doctorate</option>
+                  className="mb-4 border px-3 py-2 rounded text-sm ">
+                  <option className="text-sm" value="">Level of education </option>
+                  <option className="text-xm" value="noHighSchool">No High School Diploma</option>
+                  <option className="text-sm" value="highSchool">High School Diploma</option>
+                  <option className="text-sm" value="someCollege">Some College, No Degree</option>
+                  <option className="text-sm" value="associates">Associate Degree</option>
+                  <option className="text-sm" value="bachelors">Bachelor&apos;s Degree</option>
+                  <option className="text-sm" value="masters">Master&apos;s Degree</option>
+                  <option className="text-sm" value="doctorate">Doctorate</option>
                 </select>
               </div>
 
-              <div>
+              {/* <div>
                 <select
                   id="institution"
                   name="institution"
-                  className="mb-4 border px-3 py-2 rounded text-xm w-full">
+                  className="mb-4 border px-3 py-2 rounded text-xm ">
                   <option value="">Select an institution</option>
                   <option value="harvard">Harvard University</option>
                   <option value="mit">
@@ -141,7 +135,7 @@ const GetStarted: React.FC = () => {
                   <option value="yale">Yale University</option>
                   <option value="columbia">Columbia University</option>
                 </select>
-              </div>
+              </div> */}
 
               <div>
                 <textarea
@@ -150,7 +144,7 @@ const GetStarted: React.FC = () => {
                   placeholder="message"
                   rows={10}
                   cols={20}
-                  className="mb-4 border px-3 py-2 rounded text-xm w-full"></textarea>
+                  className="mb-4 border px-3 py-2 rounded text-xm "></textarea>
               </div>
               <div>
                 <button

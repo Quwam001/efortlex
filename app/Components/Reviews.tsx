@@ -25,7 +25,7 @@ const Reviews: React.FC = () => {
     <div>
       <div className="mt-4 mb-4  px-5 py-10 lg:px-35">
         <center>
-          <h1 className="text-blueG text-2xl font-bold">Clients Review</h1>
+          <h1 className="text-blueG text-2xl font-bold mb-4">Clients Review</h1>
         </center>
 
         <div className="hidden md:grid my-7 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -114,7 +114,7 @@ const Reviews: React.FC = () => {
           </center>
         </div>
 
-        {/* <div className="px-4 md:hidden"><Slider {...settings} className="">
+        <div className="px-4 md:hidden"><Slider {...settings} className="">
         <div className="bg-blue-100 p-4 rounded ">
             <div className="flex items-center">
               <Image src={star1} alt="star" className="h-4 w-5" />
@@ -198,7 +198,7 @@ const Reviews: React.FC = () => {
               </div>
             </div>
          
-        </Slider></div> */}
+        </Slider></div>
       </div>
     </div>
   );
