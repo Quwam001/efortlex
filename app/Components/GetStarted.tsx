@@ -117,8 +117,8 @@ const GetStarted: React.FC = () => {
                   <option value="highSchool">High School Diploma</option>
                   <option value="someCollege">Some College, No Degree</option>
                   <option value="associates">Associate Degree</option>
-                  <option value="bachelors">Bachelor's Degree</option>
-                  <option value="masters">Master's Degree</option>
+                  <option value="bachelors">Bachelor&apos;s Degree</option>
+                  <option value="masters">Master&apos;s Degree</option>
                   <option value="doctorate">Doctorate</option>
                 </select>
               </div>

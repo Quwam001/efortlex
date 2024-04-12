@@ -33,12 +33,12 @@ const GetToKnowUs: React.FC = () => {
               EduAid Solutions is a team of passionate educators, researchers,
               and writers committed to helping students succeed in their
               academic endeavors. With years of experience in academia and a
-              deep understanding of student needs, we're here to provide
+              deep understanding of student needs, we&apos;re here to provide
               personalized support and guidance every step of way.At EduAid
               Solutions, our mission is to empower students to excel
               academically by providing affordable and reliable assistance with
               their project research and coursework. We understand the
-              challenges students face, and we're dedicated to supporting them
+              challenges students face, and we&apos;re dedicated to supporting them
               in achieving their academic goals.
             </p>
           </div>
