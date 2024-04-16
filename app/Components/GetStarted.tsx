@@ -50,7 +50,7 @@ const GetStarted: React.FC = () => {
   };
   const form = useRef(null);
 
-  const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = (event: any) => {
     event.preventDefault();
     if (
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
@@ -162,7 +162,7 @@ const GetStarted: React.FC = () => {
               the contact form and our team will get back to you.
             </small>
 
-            <form ref={form} onSubmit={sendEmail} action="" className="mt-5">
+            <form ref={form} action="" className="mt-5">
               <div className="mb-4 mt-2">
                 <input
                   onChange={handleName}
@@ -264,9 +264,7 @@ const GetStarted: React.FC = () => {
               <div>
                 <button
                   className="font-light px-4 py-2 rounded font-size-2 text-sm text-white bg-black mt-6"
-                  onClick={() => {
-                    // handleSUbmit();
-                  }}>
+                  onClick={sendEmail}>
                   Send message
                 </button>
               </div>

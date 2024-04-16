@@ -28,7 +28,6 @@ const Footer: React.FC = () => {
           </small>
         </div>
       </div>
-      <a href="">REFRESH</a>
     </div>
   );
 };
