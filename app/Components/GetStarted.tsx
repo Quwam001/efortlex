@@ -62,14 +62,9 @@ const GetStarted: React.FC = () => {
       phone.trim() !== "" &&
       institute.trim() !== "" &&
       educationLevel.trim() !== "" &&
-      phone.trim() !== "" &&
-      phone.trim() !== "" && // This line seems to be duplicated, you might want to remove one
-      mail.trim() !== "" &&
-      message.trim() !== "" &&
-      mail.length > 1 &&
-      mail.endsWith(
-        "@gmail.com" || "@yahoo.com" || "@hotmail.com" || "outlook.com"
-      )
+      ((mail.trim() !== "" && mail.endsWith("@gmail.com")) ||
+        mail.endsWith("@yahoo.com") ||
+        mail.endsWith("@outlook.com")||mail.endsWith("@hotmail.com")||mail.endsWith("@google.com"))
     ) {
       emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -107,6 +102,14 @@ const GetStarted: React.FC = () => {
 
   return (
     <div>
+       <Head>
+        <title>Contact Us</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Contact us to get in touch with us" />
+        <meta name="keywords" content="contact, email, message" />
+        <meta name="author" content="ali" />
+      </Head>
+      
       <div className="mt-4 mb-4  px-5 py-5 lg:px-28">
         <center>
           <h1 className="text-blueG text-2xl font-bold">Get In Touch </h1>
