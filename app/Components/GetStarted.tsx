@@ -58,13 +58,11 @@ const GetStarted: React.FC = () => {
       process.env.NEXT_PUBLIC_EMAILJS_USER_ID &&
       form.current &&
       // Ensure value is not null or undefined
-      phone &&
-      phone.trim() !== "" &&
+      // phone &&
+      name1.trim() !== "" &&
+      message.trim() !== "" &&
       institute.trim() !== "" &&
-      educationLevel.trim() !== "" &&
-      ((mail.trim() !== "" && mail.endsWith("@gmail.com")) ||
-        mail.endsWith("@yahoo.com") ||
-        mail.endsWith("@outlook.com")||mail.endsWith("@hotmail.com")||mail.endsWith("@google.com"))
+      educationLevel.trim() !== ""
     ) {
       emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -102,14 +100,14 @@ const GetStarted: React.FC = () => {
 
   return (
     <div>
-       <Head>
+      <Head>
         <title>Contact Us</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Contact us to get in touch with us" />
         <meta name="keywords" content="contact, email, message" />
         <meta name="author" content="ali" />
       </Head>
-      
+
       <div className="mt-4 mb-4  px-5 py-5 lg:px-28">
         <center>
           <h1 className="text-blueG text-2xl font-bold">Get In Touch </h1>
@@ -179,15 +177,15 @@ const GetStarted: React.FC = () => {
               <div>
                 <input
                   type="email"
-                  onChange={handleEmail}
-                  value={mail}
+                  // onChange={handleEmail}
+                  // value={mail}
                   placeholder="Email address "
                   className="mb-4 border px-3 py-2 rounded text-xm"
                   name="e_mail"
                 />
               </div>
 
-              <div>
+              {/* <div>
                 <PhoneInput
                   onChange={handleChange}
                   placeholder="Enter phone number"
@@ -196,7 +194,7 @@ const GetStarted: React.FC = () => {
                   defaultCountry="US"
                   className=" mb-4 border px-3 py-2 bg-white"
                 />
-              </div>
+              </div> */}
 
               <div>
                 <select
