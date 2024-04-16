@@ -56,13 +56,13 @@ const GetStarted: React.FC = () => {
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
       process.env.NEXT_PUBLIC_EMAILJS_USER_ID &&
-      form.current &&
+      form.current 
       // Ensure value is not null or undefined
       // phone &&
-      name1.trim() !== "" &&
-      message.trim() !== "" &&
-      institute.trim() !== "" &&
-      educationLevel.trim() !== ""
+      // name1.trim() !== "" &&
+      // message.trim() !== "" &&
+      // institute.trim() !== "" &&
+      // educationLevel.trim() !== ""
     ) {
       emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
