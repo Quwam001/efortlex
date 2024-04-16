@@ -31,8 +31,8 @@ const NavBar: React.FC = () => {
         className={ 
           
           isScrolled
-            ? "hidden md:flex md:items-center md:justify-between md:px-20 py-3 md:fixed left-0 right-0 bg-black duration-[300ms]"
-            : " hidden md:flex md:items-center md:justify-between md:px-20 py-2  duration-[300ms]"
+            ? " z-10 hidden md:flex md:items-center md:justify-between md:px-20 py-3 md:fixed left-0 right-0 bg-black duration-[300ms]"
+            : " hidden md: z-10 flex md:items-center md:justify-between md:px-20 py-2  duration-[300ms]"
         }>
         <Link href="/">
           {" "}
