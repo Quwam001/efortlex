@@ -51,18 +51,23 @@ const GetStarted: React.FC = () => {
   const form = useRef(null);
 
   const sendEmail = (event: any) => {
+    let valid =
+      phone &&
+      phone.trim() !== "" &&
+      institute.trim() !== "" &&
+      educationLevel.trim() !== "" &&
+      ((mail.trim() !== "" && mail.endsWith("@gmail.com")) ||
+        mail.endsWith("@yahoo.com") ||
+        mail.endsWith("@outlook.com") ||
+        mail.endsWith("@hotmail.com") ||
+        mail.endsWith("@google.com"));
     event.preventDefault();
     if (
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
       process.env.NEXT_PUBLIC_EMAILJS_USER_ID &&
-      form.current 
-      // Ensure value is not null or undefined
-      // phone &&
-      // name1.trim() !== "" &&
-      // message.trim() !== "" &&
-      // institute.trim() !== "" &&
-      // educationLevel.trim() !== ""
+      form.current &&
+      valid
     ) {
       emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -87,7 +92,9 @@ const GetStarted: React.FC = () => {
       //         alert(error.text);
       //       }
       //     );
-    } else {
+    }
+    // else if()
+    else {
       swal(
         "Oops!",
         "Something went wrong. Please try again. please fill up the form none of the input can be empty and make sure you're using a valid email",
@@ -177,15 +184,15 @@ const GetStarted: React.FC = () => {
               <div>
                 <input
                   type="email"
-                  // onChange={handleEmail}
-                  // value={mail}
+                  onChange={handleEmail}
+                  value={mail}
                   placeholder="Email address "
                   className="mb-4 border px-3 py-2 rounded text-xm"
                   name="e_mail"
                 />
               </div>
 
-              {/* <div>
+              <div>
                 <PhoneInput
                   onChange={handleChange}
                   placeholder="Enter phone number"
@@ -194,7 +201,7 @@ const GetStarted: React.FC = () => {
                   defaultCountry="US"
                   className=" mb-4 border px-3 py-2 bg-white"
                 />
-              </div> */}
+              </div>
 
               <div>
                 <select
