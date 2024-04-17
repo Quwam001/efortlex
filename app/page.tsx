@@ -9,14 +9,10 @@ import Footer from "./Components/Footer";
 import GetToKnowUs from "./Components/GetToKnowUs";
 import WhyChooseUs from "./Components/WhyChooseUs";
 import Reviews from "./Components/Reviews";
-import { sendMail } from "@/lib/mail";
-// import { send } from "process";
-import Form1 from "./Components/Form1";
+
 
 export default function Home() {
-//  service=
-// 
-// public_key=
+
 
   return (
     <div>
@@ -34,7 +30,6 @@ export default function Home() {
       <WhyChooseUs />
       <Service />
       <Reviews />
-      {/* <About /> */}
       <GetStarted />
       <Footer />
      

@@ -4,8 +4,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { useState, useRef } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import emailjs from "@emailjs/browser";
-import Head from "next/head";
+
 import swal from "sweetalert";
 
 const GetStarted: React.FC = () => {
