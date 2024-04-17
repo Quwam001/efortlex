@@ -49,7 +49,7 @@ const GetStarted: React.FC = () => {
   const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMail(e.target.value);
     console.log(e.target.value);
-  };
+  }
 
   const handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -67,6 +67,7 @@ const GetStarted: React.FC = () => {
         icon: "success",
       })
       handleSubmit(e);
+      clearForm()
     } else {
       swal({
         title: "oops!",
