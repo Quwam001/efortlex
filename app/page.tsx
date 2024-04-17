@@ -11,6 +11,7 @@ import WhyChooseUs from "./Components/WhyChooseUs";
 import Reviews from "./Components/Reviews";
 import { sendMail } from "@/lib/mail";
 // import { send } from "process";
+import Form1 from "./Components/Form1";
 
 export default function Home() {
 //  service=
@@ -22,9 +23,13 @@ export default function Home() {
      
 
       <div className="bg-gradient-to-b from-blueG pb-3">
+
+        
         <NavBar />
         <Hero />
+
       </div>
+
       <GetToKnowUs />
       <WhyChooseUs />
       <Service />
@@ -32,6 +37,7 @@ export default function Home() {
       {/* <About /> */}
       <GetStarted />
       <Footer />
+     
     </div>
   );
 }

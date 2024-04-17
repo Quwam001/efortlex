@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import { useState, useRef } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
@@ -15,6 +16,7 @@ const GetStarted: React.FC = () => {
   const [mail, setMail] = useState("");
   const [message, setMessage] = useState("");
   const [name1, setName1] = useState("");
+  const [state, handleSubmit] = useForm("xkndknlj");
 
   const clearForm = () => {
     setInstitute("");
@@ -24,7 +26,7 @@ const GetStarted: React.FC = () => {
     setMessage("");
     setName1("");
   };
-  const handleChange = (event: string) => {
+  const handleChange = (event: any) => {
     setPhone(event);
     // console.log(event);
   };
@@ -33,88 +35,40 @@ const GetStarted: React.FC = () => {
     console.log(e.target.value);
   };
 
-  const handleName = (e: any) => {
+  const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName1(e.target.value);
   };
-  const submitInstiTute = (e: any) => {
+  const submitInstiTute = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setInstitute(e.target.value);
     console.log(e.target.value);
   };
-  const submitEducationalLevel = (e: any) => {
+  const submitEducationalLevel = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setEducationLevel(e.target.value);
     console.log(e.target.value);
   };
-  const handleEmail = (e: any) => {
+  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMail(e.target.value);
     console.log(e.target.value);
   };
-  const form = useRef(null);
 
-  const sendEmail = (event: any) => {
-    let valid =
-      phone &&
-      phone.trim() !== "" &&
+  const handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (
+      mail.trim() !== "" &&
       institute.trim() !== "" &&
       educationLevel.trim() !== "" &&
-      ((mail.trim() !== "" && mail.endsWith("@gmail.com")) ||
-        mail.endsWith("@yahoo.com") ||
-        mail.endsWith("@outlook.com") ||
-        mail.endsWith("@hotmail.com") ||
-        mail.endsWith("@google.com"));
-    event.preventDefault();
-    if (
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
-      process.env.NEXT_PUBLIC_EMAILJS_USER_ID &&
-      form.current &&
-      valid
+      phone.trim() !== "" &&
+      message.trim() !== "" &&
+      name1.trim() !== ""
     ) {
-      emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-      );
-      swal(
-        "Good job!",
-        "hello " +
-          name1 +
-          " Your form has been submitted successfully! we'll get back you",
-        "success"
-      );
-
-      clearForm();
-      //     .then(
-      //       (result) => {
-      //         alert(result.text);
-      //       },
-      //       (error) => {
-      //         alert(error.text);
-      //       }
-      //     );
-    }
-    // else if()
-    else {
-      swal(
-        "Oops!",
-        "Something went wrong. Please try again. please fill up the form none of the input can be empty and make sure you're using a valid email",
-        "error"
-      );
-
-      console.log("");
+      handleSubmit(e);
+    } else {
+      alert("Please fill in all fields.");
     }
   };
 
   return (
     <div>
-      <Head>
-        <title>Contact Us</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Contact us to get in touch with us" />
-        <meta name="keywords" content="contact, email, message" />
-        <meta name="author" content="ali" />
-      </Head>
-
       <div className="mt-4 mb-4  px-5 py-5 lg:px-28">
         <center>
           <h1 className="text-blueG text-2xl font-bold">Get In Touch </h1>
@@ -170,34 +124,38 @@ const GetStarted: React.FC = () => {
               the contact form and our team will get back to you.
             </small>
 
-            <form ref={form} action="" className="mt-5">
+            <form onSubmit={handleSubmitForm} method="post" className="mt-5">
               <div className="mb-4 mt-2">
                 <input
+                  name="UserName"
+                  id="userName"
+                  type="text"
                   onChange={handleName}
                   value={name1}
-                  type="text"
                   placeholder="Full_name "
                   className="border px-3 py-2 rounded text-xm "
-                  name="username"
                 />
               </div>
               <div>
                 <input
+                  name="Email"
+                  id="email"
                   type="email"
                   onChange={handleEmail}
                   value={mail}
                   placeholder="Email address "
                   className="mb-4 border px-3 py-2 rounded text-xm"
-                  name="e_mail"
                 />
               </div>
 
               <div>
                 <PhoneInput
+                  name="Number"
+                  id="phone"
+                  type="phone"
                   onChange={handleChange}
                   placeholder="Enter phone number"
                   value={phone}
-                  name="number"
                   defaultCountry="US"
                   className=" mb-4 border px-3 py-2 bg-white"
                 />
@@ -206,9 +164,10 @@ const GetStarted: React.FC = () => {
               <div>
                 <select
                   onChange={submitEducationalLevel}
-                  id="educationLevel"
+                  name="EducationLevel"
+                  id="institution"
                   value={educationLevel}
-                  name="educationLevel"
+            
                   className="mb-4 border px-3 py-2 rounded text-sm ">
                   <option className="text-sm" value="">
                     Level of education{" "}
@@ -239,9 +198,9 @@ const GetStarted: React.FC = () => {
               <div>
                 <select
                   onChange={submitInstiTute}
-                  value={institute}
+                  name="Institute"
                   id="institution"
-                  name="institution"
+                  value={institute}
                   className="mb-4 border px-3 py-2 rounded text-sm ">
                   <option value="">Select an institution</option>
                   <option value="harvard">Harvard University</option>
@@ -261,18 +220,17 @@ const GetStarted: React.FC = () => {
               <div>
                 <textarea
                   onChange={handleMessage}
+                  name="Message"
+                  id="message"
                   value={message}
-                  name="message"
-                  id=""
+                  
                   placeholder="message"
                   rows={10}
                   cols={20}
                   className="mb-4 border px-3 py-2 rounded text-xm "></textarea>
               </div>
               <div>
-                <button
-                  className="font-light px-4 py-2 rounded font-size-2 text-sm text-white bg-black mt-6"
-                  onClick={sendEmail}>
+                <button type="submit" className="font-light px-4 py-2 rounded font-size-2 text-sm text-white bg-black mt-6">
                   Send message
                 </button>
               </div>
