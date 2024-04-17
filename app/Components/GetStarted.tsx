@@ -61,9 +61,18 @@ const GetStarted: React.FC = () => {
       message.trim() !== "" &&
       name1.trim() !== ""
     ) {
+      swal({
+        title:"Good job!",
+        text: "Hi "+name1+ " your message has been submitted successfully!",
+        icon: "success",
+      })
       handleSubmit(e);
     } else {
-      alert("Please fill in all fields.");
+      swal({
+        title: "oops!",
+        text: "please fill all the empty input!",
+        icon: "error",
+      });
     }
   };
 
@@ -167,7 +176,6 @@ const GetStarted: React.FC = () => {
                   name="EducationLevel"
                   id="institution"
                   value={educationLevel}
-            
                   className="mb-4 border px-3 py-2 rounded text-sm ">
                   <option className="text-sm" value="">
                     Level of education{" "}
@@ -223,14 +231,15 @@ const GetStarted: React.FC = () => {
                   name="Message"
                   id="message"
                   value={message}
-                  
                   placeholder="message"
                   rows={10}
                   cols={20}
                   className="mb-4 border px-3 py-2 rounded text-xm "></textarea>
               </div>
               <div>
-                <button type="submit" className="font-light px-4 py-2 rounded font-size-2 text-sm text-white bg-black mt-6">
+                <button
+                  type="submit"
+                  className="font-light px-4 py-2 rounded font-size-2 text-sm text-white bg-black mt-6">
                   Send message
                 </button>
               </div>
