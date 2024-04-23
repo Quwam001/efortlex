@@ -15,7 +15,7 @@ const GetStarted: React.FC = () => {
   const [mail, setMail] = useState("");
   const [message, setMessage] = useState("");
   const [name1, setName1] = useState("");
-  const [state, handleSubmit] = useForm("xkndknlj");
+  const [state, handleSubmit] = useForm("xzbnyybw");
 
   const clearForm = () => {
     setInstitute("");
@@ -48,7 +48,7 @@ const GetStarted: React.FC = () => {
   const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMail(e.target.value);
     console.log(e.target.value);
-  }
+  };
 
   const handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -61,12 +61,12 @@ const GetStarted: React.FC = () => {
       name1.trim() !== ""
     ) {
       swal({
-        title:"Good job!",
-        text: "Hi "+name1+ " your message has been submitted successfully!",
+        title: "Good job!",
+        text: "Hi " + name1 + " your message has been submitted successfully!",
         icon: "success",
-      })
+      });
       handleSubmit(e);
-      clearForm()
+      clearForm();
     } else {
       swal({
         title: "oops!",
